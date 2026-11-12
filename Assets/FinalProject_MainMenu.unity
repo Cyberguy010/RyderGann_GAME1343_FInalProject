@@ -295,6 +295,7 @@ GameObject:
   - component: {fileID: 472300216}
   - component: {fileID: 472300215}
   - component: {fileID: 472300214}
+  - component: {fileID: 472300218}
   m_Layer: 5
   m_Name: FinalProjectCanvas
   m_TagString: Untagged
@@ -386,6 +387,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &472300218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472300213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c6425bba93a91468ec6b37025ff2a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FinalProjectButtonManager
 --- !u!1 &933182897
 GameObject:
   m_ObjectHideFlags: 0
@@ -879,7 +892,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1292232570}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 472300218}
+        m_TargetAssemblyTypeName: FinalProjectButtonManager, Assembly-CSharp
+        m_MethodName: ExitApplication
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1292232570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1010,7 +1035,7 @@ GameObject:
   - component: {fileID: 1510278339}
   - component: {fileID: 1510278338}
   m_Layer: 5
-  m_Name: Play  Button
+  m_Name: Play Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1079,7 +1104,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1510278339}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 472300218}
+        m_TargetAssemblyTypeName: FinalProjectButtonManager, Assembly-CSharp
+        m_MethodName: GoToEndlessBarrels
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1510278339
 MonoBehaviour:
   m_ObjectHideFlags: 0
