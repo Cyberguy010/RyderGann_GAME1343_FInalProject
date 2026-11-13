@@ -18,4 +18,8 @@ public class PlayerController : MonoBehaviour
     {
 
     }
+    public void WhenHitbyBarrel()
+    {
+
+    }
 }
