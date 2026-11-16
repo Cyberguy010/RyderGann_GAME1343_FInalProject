@@ -4,6 +4,8 @@ using UnityEngine.InputSystem;
 public class BarrelSpawner : MonoBehaviour
 {
     public GameObject barrelPrefab;
+    public float spawnInterval = 3.0f;
+    public bool spawnOnStart = true;
 
 
     // Update is called once per frame
@@ -15,7 +17,7 @@ public class BarrelSpawner : MonoBehaviour
             return;
         }
 
-        if(kb.eKey.wasPressedThisFrame)
+        if(kb.spaceKey.wasPressedThisFrame)
         {
             Instantiate(barrelPrefab, gameObject.transform.position, gameObject.transform.rotation);
         }

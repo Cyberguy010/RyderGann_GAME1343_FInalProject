@@ -3,20 +3,19 @@ using UnityEngine.SceneManagement;
 
 public class FinalProjectButtonManager : MonoBehaviour
 {
-    string FinalProject_MainMenu = "FinalProject_MainMenu";
-    string EndlessBarrels_Scene = "EndlessBarrels_Scene";
+    string FinalProject_Menu = "FinalProject_Menu";
+    string EndlessBarrels_Scene = "EndessBarrels_Scene";
 
     public void GoToMainMenu()
     {
-        Debug.Log("FinalProject_MainMenu");
-        SceneManager.LoadScene(FinalProject_MainMenu);
+        Debug.Log("FinalProject_Menu");
+        SceneManager.LoadScene(FinalProject_Menu);
     }
     public void GoToEndlessBarrels()
     {
         Debug.Log("EndlessBarrels_Scene");
         SceneManager.LoadScene(EndlessBarrels_Scene);
     }
-
     public void ExitApplication()
     {
         Debug.Log("Exit");
@@ -26,3 +25,4 @@ public class FinalProjectButtonManager : MonoBehaviour
         Application.Quit();
     }
 }
+ 
