@@ -29,16 +29,17 @@ public class EndlessBarrelsManager : MonoBehaviour
 
     public void UpdateUI()
     {
-
+        playerScorefield.text = playerScorefield.ToString();
+        playerLivesfield.text = playerLivesfield.ToString();
     }
 
     public void AddScore(int value)
     {
-
+        gameScore += value;
     }
 
     public void RemoveLife(int value)
     {
-
+        playerLives -= value;
     }
 }
