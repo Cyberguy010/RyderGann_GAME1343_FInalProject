@@ -16,13 +16,15 @@ public class BarrrelPrefab : MonoBehaviour
         
     }
 
-    public void AddScore()
+    private void OnCollisionEnter(Collision collision)
     {
-        
+        Debug.Log(collision.gameObject.name);
+
+        PlayerController pc = collision.gameObject.GetComponentInParent<PlayerController>();
+        if (pc)
+        {
+            Debug.Log("Hit player"); 
+        }
     }
     
-    public void HitPlayer()
-    {
-
-    }
 }

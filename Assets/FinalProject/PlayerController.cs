@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     public int inputNumber = 1;
     public int playerScore = 0;
     public int playerLives = 3;
+    private bool isGrounded;
+    public float jumpforce = 1000;
     InputData data;
     Rigidbody rb;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -24,6 +26,10 @@ public class PlayerController : MonoBehaviour
 
         MovePlayer(data.leftStick.x);
         JumpPlayer(data.leftStick.y);
+
+        
+
+       
     }
 
     public void MovePlayer(float value)
@@ -46,6 +52,16 @@ public class PlayerController : MonoBehaviour
     }
     public void JumpPlayer(float value)
     {
-        
+        if (value <= .75f) { return;  }
+        if (!IsGrounded()) { return; }
+
+        rb.AddForce(Vector3.up * jumpforce);
+
+    }
+
+    public bool IsGrounded()
+    {
+        // stub code. 
+        return true; 
     }
 }
